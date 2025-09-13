@@ -53,7 +53,7 @@ La base de datos `gestion_empleados` contiene una tabla principal:
 ## 🔧 Instalación
 1. Clonar el repositorio en el directorio web:
    ```bash
-   git clone https://github.com/usuario/gestion_empleados.git
+   git clone https://github.com/47706094-bot/RAPIGAS.git
    ```
 2. Importar el archivo SQL de la base de datos
 3. Configurar los datos de conexión en `conexion.php`
