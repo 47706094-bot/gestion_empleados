@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         executionOrder="depends,defects"
+         failOnWarning="true"
+         failOnRisky="true"
+         failOnEmptyTestSuite="true"
+         cacheDirectory=".phpunit.cache"
+         backupGlobals="false">
+
+    <!-- Carpeta donde buscar las pruebas -->
+    <testsuites>
+        <testsuite name="RAPIGAS Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Configuración de cobertura -->
+    <source>
+        <include>
+            <directory suffix=".php">src</directory>
+            <directory suffix=".php">api</directory>
+        </include>
+    </source>
+
+    <!-- Configuración de PHP -->
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="display_errors" value="1"/>
+        <ini name="display_startup_errors" value="1"/>
+    </php>
+</phpunit>
