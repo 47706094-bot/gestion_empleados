@@ -1,4 +1,18 @@
 <?php
+declare(strict_types=1);
+
+// Implementación mínima para TDD - devuelve null por ahora
+class Conexion
+{
+    public static function conectar()
+    {
+        // implementación mínima: devolver null (la API existe)
+        return null;
+    }
+}
+
+
+/*
 class Conexion {
     private static $host = "127.0.0.1";   // o "localhost"
     private static $user = "root";        // ajusta según tu entorno
@@ -20,3 +34,4 @@ class Conexion {
         return $mysqli;
     }
 }
+*/
