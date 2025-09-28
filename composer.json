@@ -3,7 +3,8 @@
     "description": "Sistema PHP para gestión de empleados con pruebas unitarias",
     "type": "project",
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "illuminate/database": "^12.31"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.0",
