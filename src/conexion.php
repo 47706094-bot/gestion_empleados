@@ -1,6 +1,32 @@
 <?php
 declare(strict_types=1);
 
+class Conexion implements ConnectionInterface
+{
+    public static function conectar(): ?\mysqli
+    {
+        $host = getenv('DB_HOST') ?: null;
+        $user = getenv('DB_USER') ?: null;
+        $pass = getenv('DB_PASS') ?: null;
+        $db   = getenv('DB_NAME') ?: null;
+
+        if (!$host || !$user || !$db) {
+            return null;
+        }
+
+        $conexion = @new \mysqli($host, $user, $pass, $db);
+
+        if ($conexion->connect_errno) {
+            return null;
+        }
+        return $conexion;
+    }
+}
+
+
+/*
+declare(strict_types=1);
+
 class Conexion
 {
     public static function conectar()
@@ -22,7 +48,7 @@ class Conexion
     }
 }
 
-
+*/
 /*
 declare(strict_types=1);
 
