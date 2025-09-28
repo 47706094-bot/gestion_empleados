@@ -20,8 +20,14 @@ final class EmpleadoTest extends TestCase
 
     public function testBuscarEmpleadoPorEmail(): void
     {
-        $empleado = Empleado::where('email', 'juan@example.com')->first();
-        $this->assertSame("Juan Pérez", $empleado->nombre);
+        $empleado = Empleado::where('email', 'jose@example.com')->first();
+        $this->assertSame("Jose Pinares", $empleado->nombre);
     }
+
+    public function scopePorEmail($query, string $email)
+    {
+        return $query->where('email', $email);
+    }
+
 
 }
