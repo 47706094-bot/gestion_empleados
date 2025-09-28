@@ -19,6 +19,20 @@ final class CalculadoraTest extends TestCase
         $this->assertSame(0, $calc->resta(2, 2));
     }
 
+    public function testDivisionDosNumeros(): void
+    {
+        $calc = new Calculadora();
+        $this->assertSame(2, $calc->divide(4, 2));
+    }
+
+    public function testDivisionPorCeroLanzaExcepcion(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $calc = new Calculadora();
+        $calc->divide(4, 0);
+    }
+
+
 }
 
 
