@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 interface ConnectionInterface
 {
-    public static function conectar(): ?\mysqli;
+    public function conectar(): ?\mysqli;
 }
 
 
