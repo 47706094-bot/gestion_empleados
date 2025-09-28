@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/ConnectionInterface.php';
+
 class Conexion implements ConnectionInterface
 {
     public static function conectar(): ?\mysqli
@@ -22,6 +24,7 @@ class Conexion implements ConnectionInterface
         return $conexion;
     }
 }
+
 
 
 /*
