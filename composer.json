@@ -1,25 +1,38 @@
 {
     "name": "rapigas/gestion-empleados",
-    "description": "Sistema PHP para gestión de empleados con pruebas unitarias",
+    "description": "Sistema PHP para gestión de empleados con pruebas unitarias y ORM",
     "type": "project",
+    "license": "MIT",
     "require": {
         "php": ">=8.0",
-        "illuminate/database": "^12.31"
+        "illuminate/database": "^12.31",
+        "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.0",
-        "vlucas/phpdotenv": "^5.6"
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
         }
     },
-    
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "gestion_usuario/"
         }
+    },
+    "scripts": {
+        "test": "phpunit --configuration phpunit.xml --colors=always",
+        "post-install-cmd": [
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "minimum-stability": "stable",
     "prefer-stable": true

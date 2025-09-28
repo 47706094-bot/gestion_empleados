@@ -1,4 +1,33 @@
 <?php
+class Conexion {
+    private $conexion;
+
+    public function __construct(
+        $host = "127.0.0.1",
+        $user = "root",
+        $pass = "",
+        $db   = "test"
+    ) {
+        $this->conexion = @new mysqli($host, $user, $pass, $db);
+
+        if ($this->conexion->connect_errno) {
+            $this->conexion = null;
+        }
+    }
+
+    // Método que esperan los tests
+    public function conectar() {
+        return $this->conexion;
+    }
+
+    // Método auxiliar
+    public function getConexion() {
+        return $this->conexion;
+    }
+}
+
+
+/*
 declare(strict_types=1);
 
 require_once __DIR__ . '/ConnectionInterface.php';
