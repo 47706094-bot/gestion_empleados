@@ -12,7 +12,15 @@ final class CalculadoraTest extends TestCase
         $calc = new Calculadora();
         $this->assertSame(4, $calc->suma(2, 2));
     }
+    //agregamos test de resta
+    public function testRestaDosNumeros(): void
+    {
+        $calc = new Calculadora();
+        $this->assertSame(0, $calc->resta(2, 2));
+    }
+
 }
+
 
 
 /*
