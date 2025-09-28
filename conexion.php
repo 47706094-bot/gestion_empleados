@@ -1,17 +1,17 @@
 <?php
-// $host = "localhost";   // Host
-// $dbname = "gestion_usuario";     // Nombre BD
-// $username = "root";          // Usuario
-// $password = "";        // Contraseña
+$host = "localhost";   // Host
+$dbname = "gestion_usuario";     // Nombre BD
+$username = "root";          // Usuario
+$password = "";        // Contraseña
 
 
 
-
+/*
 $host = "sql107.infinityfree.com";   // Host
 $dbname = "if0_39709972_rapigas";     // Nombre BD
 $username = "if0_39709972";          // Usuario
 $password = "yxCa5YwgPH1kZU";        // Contraseña
-
+*/
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
