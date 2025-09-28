@@ -14,6 +14,16 @@ class Calculadora
         return $a - $b;
     }
 
+    //agregamos metodo division
+    public function divide(int $a, int $b): float
+    {
+        if ($b === 0) {
+            throw new InvalidArgumentException("División por cero no permitida");
+        }
+        return $a / $b;
+    }
+
+
 }
 //Implementacion de metodos para realizar pruebas unitarias
 
