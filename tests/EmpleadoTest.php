@@ -17,4 +17,11 @@ final class EmpleadoTest extends TestCase
 
         $this->assertNotNull($empleado->id);
     }
+
+    public function testBuscarEmpleadoPorEmail(): void
+    {
+        $empleado = Empleado::where('email', 'juan@example.com')->first();
+        $this->assertSame("Juan Pérez", $empleado->nombre);
+    }
+
 }
